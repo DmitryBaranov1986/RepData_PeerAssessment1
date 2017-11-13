@@ -134,7 +134,7 @@ $(document).ready(function () {
     dir.create(&quot;./data&quot;)
 
 download.file(&quot;https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip&quot;, &quot;./data/activity.zip&quot;)
-unzip(&quot;./data/activity.zip&quot;)
+unzip(&quot;./data/activity.zip&quot;, exdir = &quot;./data&quot;)
 activity &lt;- read.table(&quot;./data/activity.csv&quot;, header= TRUE, sep = ',', stringsAsFactors = FALSE, na.strings = &quot;NA&quot;)
 
 head(activity)</code></pre>

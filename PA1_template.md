@@ -18,7 +18,7 @@ if (!dir.exists("./data"))
     dir.create("./data")
 
 download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip", "./data/activity.zip")
-unzip("./data/activity.zip")
+unzip("./data/activity.zip", exdir = "./data")
 activity <- read.table("./data/activity.csv", header= TRUE, sep = ',', stringsAsFactors = FALSE, na.strings = "NA")
 
 head(activity)

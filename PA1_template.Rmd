@@ -14,9 +14,9 @@ library(dplyr)
 library(lattice)
 ```
 
-## Daily activity monitoring data research
+## Personal movement activity
 
-It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up. These type of devices are part of the “quantified self” movement – a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. But these data remain under-utilized both because the raw data are hard to obtain and there is a lack of statistical methods and software for processing and interpreting the data.
+It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up. These type of devices are part of the "quantified self" movement - a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. But these data remain under-utilized both because the raw data are hard to obtain and there is a lack of statistical methods and software for processing and interpreting the data.
 
 ## Loading and preprocessing the data
 
@@ -27,7 +27,7 @@ if (!dir.exists("./data"))
     dir.create("./data")
 
 download.file("https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip", "./data/activity.zip")
-unzip("./data/activity.zip")
+unzip("./data/activity.zip", exdir = "./data")
 activity <- read.table("./data/activity.csv", header= TRUE, sep = ',', stringsAsFactors = FALSE, na.strings = "NA")
 
 head(activity)
@@ -121,4 +121,3 @@ xyplot(mean.steps ~ interval | weekpart, data = weekpart.interval.mean.steps, la
 ```{r environment}
 sessionInfo()
 ```
-
