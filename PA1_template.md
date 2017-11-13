@@ -50,7 +50,7 @@ day.activity <- activity %>% group_by(date) %>% summarize(total.steps = sum(step
 hist(day.activity$total.steps, breaks = 8, col = "green", xlab = "Number of steps", main = "Total number of steps per day")
 ```
 
-![](PA1_template_files/figure-html/hist total number steps per day-1.png)<!-- -->
+![](figure/hist total number steps per day-1.png)<!-- -->
 
 Mean
 
@@ -81,7 +81,7 @@ interval.activity <- activity %>% group_by(interval) %>% summarize(mean.steps = 
 with(interval.activity, plot(x = interval, y = mean.steps, type = "l", xlab = "5 min intervals", ylab = "Average number of steps"))
 ```
 
-![](PA1_template_files/figure-html/time series total steps-1.png)<!-- -->
+![](figure/time series total steps-1.png)<!-- -->
 
 Interval with maximum number of steps on average
 
@@ -120,7 +120,7 @@ day.activity.full <- activity.full %>% group_by(date) %>% summarize(total.steps 
 hist(day.activity.full$total.steps, breaks = 8, col = "green", xlab = "Number of steps", main = "Total number of steps per day")
 ```
 
-![](PA1_template_files/figure-html/hist total number steps per day fill missing-1.png)<!-- -->
+![](figure/hist total number steps per day fill missing-1.png)<!-- -->
 
 Mean with filled missing vales
 
@@ -160,7 +160,7 @@ weekpart.interval.mean.steps <- activity.full %>% group_by(weekpart, interval) %
 xyplot(mean.steps ~ interval | weekpart, data = weekpart.interval.mean.steps, layout = c(1,2), type = "l", ylab = "Number of steps", xlab = "Interval")
 ```
 
-![](PA1_template_files/figure-html/time series weekpart avg steps-1.png)<!-- -->
+![](figure/time series weekpart avg steps-1.png)<!-- -->
 
 ## My software environment
 
